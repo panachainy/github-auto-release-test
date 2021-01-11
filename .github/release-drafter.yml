@@ -1,7 +1,7 @@
 name-template: 'v$RESOLVED_VERSION 2🌈'
 tag-template: 'v$RESOLVED_VERSION'
 template: |
-  ## Changes
+  ## Changes test
 
   $CHANGES
 categories:
