@@ -8,7 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: |
+      - name: Create tag
+        run: |
           export VERSION=$(npm run env | grep npm_package_version | cut -d '=' -f 2)
           echo $VERSION
+          git fetch --all --tags
           git tag $VERSION
+          git push --tags
