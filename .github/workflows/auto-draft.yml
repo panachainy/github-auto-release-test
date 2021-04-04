@@ -16,6 +16,6 @@ jobs:
           config-name: release-drafter.yml
           tag: ${{ env.VERSION }}
           version: ${{ env.VERSION }}
-          publish: true
+          publish: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
