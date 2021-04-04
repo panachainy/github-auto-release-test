@@ -15,6 +15,7 @@ jobs:
           echo 'export APP_VERSION=$APP_VERSION' >> $GITHUB_ENV
           echo env.APP_VERSION
           echo $APP_VERSION
+          echo $VERSION
           echo "env===2"
       - uses: release-drafter/release-drafter@v5
         with:
