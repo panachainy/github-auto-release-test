@@ -1,0 +1,14 @@
+name: Release version
+
+on:
+  push:
+    branches: [ release ]
+
+jobs:
+
+  release_version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2.1.5
+      - run: npm version $RESOLVED_VERSION
