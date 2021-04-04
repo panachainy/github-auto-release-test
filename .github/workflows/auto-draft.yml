@@ -12,7 +12,7 @@ jobs:
       - name: Set version from app
         run: |
           version=$(npm run env | grep npm_package_version | cut -d '=' -f 2)
-          echo 'VERSION=1.1.2' >> $GITHUB_ENV
+          echo 'VERSION=1.1.3' >> $GITHUB_ENV
           # echo env.version
           # echo $version
           # echo "env===2"
