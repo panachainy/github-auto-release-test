@@ -11,7 +11,7 @@ jobs:
       - name: Create tag
         run: |
           export VERSION=$(npm run env | grep npm_package_version | cut -d '=' -f 2)
-          echo $VERSION
+          echo app version $VERSION
           git fetch --all --tags
-          git tag $VERSION
+          git tag v$VERSION
           git push --tags
