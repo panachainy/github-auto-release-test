@@ -32,7 +32,3 @@ version-resolver:
     labels:
       - 'patch'
   default: patch
-prerelease: true
-# tag:
-# version:
-# publish:
