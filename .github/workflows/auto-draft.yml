@@ -8,6 +8,7 @@ jobs:
   update_release_draft:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Set version from app
         run: echo 'VERSION=$(npm run env | grep npm_package_version | cut -d '=' -f 2)' >> $GITHUB_ENV
       - uses: release-drafter/release-drafter@v5
