@@ -2,7 +2,7 @@ name: Release version
 
 on:
   push:
-    branches: [ release ]
+    branches: [ feature/way-3 ]
 
 jobs:
 
