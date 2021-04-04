@@ -1,0 +1,23 @@
+name: "update changelog"
+on:
+  release:
+    types: [published]
+
+jobs:
+  update-changelog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Auto Action
+        uses: terradatum/auto-action@v1.0.12
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        with:
+          email: kbaz@gmail.com
+          name: Kathy Baz
+          command: release
+          plugins: |
+            npm
+            git-tag
+            releases
