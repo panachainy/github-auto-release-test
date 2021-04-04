@@ -3,3 +3,5 @@ fix: fix/*
 chore: chore/*
 debt: debt/*
 
+minor: feature/*
+patch: ["fix/*", "chore/*", "debt/*"]
