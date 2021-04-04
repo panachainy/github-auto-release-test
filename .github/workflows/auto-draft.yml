@@ -5,7 +5,7 @@ on:
     branches: [develop]
 
 jobs:
-  update_release_draft:
+  create_release_draft:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -16,6 +16,6 @@ jobs:
           config-name: release-drafter.yml
           tag: ${{ env.VERSION }}
           version: ${{ env.VERSION }}
-          publish: false
+          publish: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
