@@ -11,9 +11,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Set version from app
         run: |
-          echo 'export VERSION=./version.sh' >> $GITHUB_ENV
-          echo $(npm run env | grep npm_package_version | cut -d '=' -f 2)
-          echo env.VERSION
+          echo VERSION=$(npm run env | grep npm_package_version | cut -d '=' -f 2)
+          echo 'export VERSION=$VERSION' >> $GITHUB_ENV
       - uses: release-drafter/release-drafter@v5
         with:
           config-name: release-drafter.yml
