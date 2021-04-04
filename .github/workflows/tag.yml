@@ -2,7 +2,7 @@ name: Auto tag
 on:
   push:
     branches:
-      - feature/way-3
+      - release
 jobs:
   update-changelog:
     runs-on: ubuntu-latest
