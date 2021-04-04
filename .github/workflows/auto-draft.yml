@@ -11,5 +11,13 @@ jobs:
       - uses: release-drafter/release-drafter@v5
         with:
           config-name: release-drafter.yml
+          tag: 2.2.1
+          version: 2.2.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+# prerelease: true
+# tag: 2.2.1
+# version: 2.1
+
+# steps.
