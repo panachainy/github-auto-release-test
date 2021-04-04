@@ -11,16 +11,16 @@ jobs:
       - uses: actions/checkout@v2
       - name: Set version from app
         run: |
-          VERSION=$(npm run env | grep npm_package_version | cut -d '=' -f 2)
-          echo 'export VERSION=$VERSION' >> $GITHUB_ENV
-          echo env.VERSION
-          echo $VERSION
+          version=$(npm run env | grep npm_package_version | cut -d '=' -f 2)
+          echo 'export version=$version' >> $GITHUB_ENV
+          echo env.version
+          echo $version
           echo "env===2"
       - uses: release-drafter/release-drafter@v5
         with:
           config-name: release-drafter.yml
-          tag: ${{ env.VERSION }}
-          version: ${{ env.VERSION }}
+          tag: 2 # ${{ env.VERSION }}
+          # version: ${{ env.VERSION }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
