@@ -3,7 +3,7 @@ name: Release npm package
 on:
   push:
     branches:
-      - develop
+      - feature/new-2
 
 jobs:
   release:
