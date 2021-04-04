@@ -13,5 +13,5 @@ jobs:
           export VERSION=$(npm run env | grep npm_package_version | cut -d '=' -f 2)
           echo app version $VERSION
           git fetch --all --tags
-          git tag v$VERSION
+          git tag temp/$VERSION
           git push --tags
